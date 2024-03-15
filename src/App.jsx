@@ -5,7 +5,7 @@ import Carts from './components/Carts';
 
 const App = () => {
   return (
-    <div className="container mx-auto p-7 lg:px-16 xl:px-24">
+    <div className="container mx-auto p-7 lg:px-12 xl:px-16">
       <Header />
       <section>
         <div className=" w-2/3 mx-auto text-center space-y-6  mb-12">

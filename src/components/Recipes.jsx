@@ -21,8 +21,8 @@ const Recipes = () => {
 
   return (
     <div className="lg:col-span-3">
-      <h2>Recipes</h2>
-      <section>
+      {/* <h2>Recipes</h2> */}
+      <section className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
         {recipes.map((recipe) => (
           <Recipe key={recipe.recipe_id} recipe={recipe} />
         ))}
