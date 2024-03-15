@@ -73,8 +73,6 @@
       "calories": 380,
       "recipe_image": "https://i.ibb.co/7gSqdzJ/eggplant-parmesan.jpg"
     },
-
-
     {
       "recipe_id": 8,
       "recipe_name": "Berry Smoothie",
@@ -83,7 +81,15 @@
       "preparing_time": 10,
       "calories": 150,
       "recipe_image": "https://i.ibb.co/DWMyBy5/berry-smoothie.jpg"
+    },
+    {
+      "recipe_id": 10,
+      "recipe_name": "Chicken Parmesan",
+      "short_description": "Classic Italian dish with breaded chicken topped with marinara sauce and cheese.",
+      "ingredients": ["2 boneless, skinless chicken breasts", "100g breadcrumbs", "200ml marinara sauce", "150g mozzarella cheese", "30ml olive oil", "Salt and pepper to taste"],
+      "preparing_time": 40,
+      "calories": 350,
+      "recipe_image": "https://i.ibb.co/GM4q8T7/chicken-parmesan.jpgg"
     }
-
   ]
 }
