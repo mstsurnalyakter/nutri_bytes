@@ -1,0 +1,85 @@
+{
+  "recipes": [
+    {
+      "recipe_id": 1,
+      "recipe_name": "Spaghetti Bolognese",
+      "short_description": "Classic Italian pasta dish with savory meat sauce.",
+      "ingredients": ["300 g spaghetti", "250 g ground beef", "200 g tomato sauce", "100 g diced onions", "50 g chopped garlic", "30 ml olive oil", "Salt and pepper to taste"],
+      "preparing_time": "45 min",
+      "calories": "400 calories",
+      "recipe_image": "https://i.ibb.co/RSHBbzx/spaghetti-bolognese.jpg"
+    },
+    {
+      "recipe_id": 2,
+      "recipe_name": "Chicken Stir-Fry",
+      "short_description": "Quick and easy stir-fried chicken with vegetables.",
+      "ingredients": ["400 g chicken breast", "200 g mixed vegetables (bell peppers, broccoli, carrots)", "50 g soy sauce", "30 ml sesame oil", "10 g ginger", "10 g garlic", "Salt and pepper to taste"],
+      "preparing_time": "30 min",
+      "calories": "350 calories",
+      "recipe_image": "https://i.ibb.co/2Yz4htX/chicken-stir-fry.jpg"
+    },
+    {
+      "recipe_id": 3,
+      "recipe_name": "Vegetable Curry",
+      "short_description": "A flavorful vegetarian curry loaded with vegetables.",
+      "ingredients": ["300 g mixed vegetables (potatoes, carrots, peas)", "200 ml coconut milk", "100 g diced tomatoes", "50 g curry paste", "30 ml vegetable oil", "5 g turmeric powder", "5 g cumin powder", "Salt to taste"],
+      "preparing_time": "40 min",
+      "calories": "300 calories",
+      "recipe_image": "https://i.ibb.co/D9vgwkb/vegetable-curry.jpg"
+    },
+    {
+      "recipe_id": 4,
+      "recipe_name": "Caprese Salad",
+      "short_description": "A simple and refreshing Italian salad with tomatoes, mozzarella, and basil.",
+      "ingredients": ["200 g cherry tomatoes", "150 g fresh mozzarella cheese", "50 g fresh basil leaves", "30 ml balsamic glaze", "15 ml olive oil", "Salt and pepper to taste"],
+      "preparing_time": "15 min",
+      "calories": "200 calories",
+      "recipe_image": "https://i.ibb.co/QCrxnDZ/caprese-salad.jpg"
+    },
+    {
+      "recipe_id": 5,
+      "recipe_name": "Beef Tacos",
+      "short_description": "Tasty tacos filled with seasoned beef and fresh toppings.",
+      "ingredients": ["300 g ground beef", "200 g taco shells", "100 g shredded lettuce", "50 g diced tomatoes", "30 g shredded cheese", "30 g sour cream", "15 g taco seasoning"],
+      "preparing_time": "25 min",
+      "calories": "350 calories",
+      "recipe_image": "https://i.ibb.co/M6TNydY/beef-tacos.jpg"
+    },
+    {
+      "recipe_id": 6,
+      "recipe_name": "Mushroom Risotto",
+      "short_description": "Creamy and flavorful Italian rice dish with mushrooms.",
+      "ingredients": ["300 g Arborio rice", "200 g mushrooms", "100 ml white wine", "50 g grated Parmesan cheese", "30 g butter", "1 liter vegetable broth", "10 g chopped parsley", "Salt and pepper to taste"],
+      "preparing_time": "35 min",
+      "calories": "320 calories",
+      "recipe_image": "https://i.ibb.co/HFTGdTx/mushroom-risotto.jpg"
+    },
+    {
+      "recipe_id": 7,
+      "recipe_name": "Greek Salad",
+      "short_description": "A fresh and colorful salad with tomatoes, cucumbers, olives, and feta cheese.",
+      "ingredients": ["200 g cherry tomatoes", "150 g cucumber", "100 g kalamata olives", "50 g feta cheese", "30 ml olive oil", "15 ml red wine vinegar", "5 g dried oregano", "Salt and pepper to taste"],
+      "preparing_time": "15 min",
+      "calories": "180 calories",
+      "recipe_image": "https://i.ibb.co/mtGXYMr/greek-salad.jpg"
+    },
+    {
+      "recipe_id": 8,
+      "recipe_name": "Berry Smoothie",
+      "short_description": "A refreshing smoothie packed with mixed berries and yogurt.",
+      "ingredients": ["200 g mixed berries (strawberries, blueberries, raspberries)", "150 ml yogurt", "100 ml almond milk", "10 g honey (optional)", "Ice cubes"],
+      "preparing_time": "10 min",
+      "calories": "150 calories",
+      "recipe_image": "https://i.ibb.co/DWMyBy5/berry-smoothie.jpg"
+    },
+    {
+      "recipe_id": 9,
+      "recipe_name": "Eggplant Parmesan",
+      "short_description": "A delicious Italian dish featuring breaded and baked eggplant slices layered with marinara sauce and cheese.",
+      "ingredients": ["2 large eggplants", "200 g marinara sauce", "150 g mozzarella cheese", "50 g grated Parmesan cheese", "30 g breadcrumbs", "30 ml olive oil", "10 g Italian seasoning", "Salt and pepper to taste"],
+      "preparing_time": "50 min",
+      "calories": "380 calories",
+      "recipe_image": "https://i.ibb.co/7gSqdzJ/eggplant-parmesan.jpg"
+    }
+  ]
+}
