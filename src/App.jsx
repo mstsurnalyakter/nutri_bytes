@@ -2,22 +2,24 @@ import React, { useState } from 'react'
 import Header from './components/Header'
 import Recipes from './components/Recipes';
 import Carts from './components/Carts';
-  import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
 
-  const [recipes,setRecipes] = useState([]);
+  const [carts,setCarts] = useState([]);
 
   const handleWantToCook = recipe =>{
-    const isExist = recipes.find(rp => rp.id === recipe.id);
-    if (isExist) {
-      toast.warn("Recipe already selected!");
-    }else{
-      setRecipes([...recipes, recipe]);
-      toast.success("Recipe Successfully Add");
-    }
+      const isExist = carts.find((cart) => cart.recipe_id === recipe.recipe_id);
+      if (isExist) {
+        toast.warn("Recipe already selected!");
+      } else {
+        setCarts([...carts, recipe]);
+        toast.success("Recipe Successfully Add");
+      }
   }
+
+  console.log(carts);
 
   return (
     <div className="container mx-auto p-7 lg:px-12 xl:px-16">
@@ -36,7 +38,7 @@ const App = () => {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
           <Recipes handleWantToCook={handleWantToCook} />
-          <Carts />
+          <Carts carts={carts} />
         </div>
       </section>
       <ToastContainer />

@@ -5,7 +5,6 @@ import { AiOutlineFire } from "react-icons/ai";
 
 const Recipe = ({ recipe, handleWantToCook }) => {
   const {
-    recipe_id,
     recipe_name,
     short_description,
     ingredients,
