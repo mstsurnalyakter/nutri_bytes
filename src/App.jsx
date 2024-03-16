@@ -19,7 +19,13 @@ const App = () => {
       }
   }
 
-  console.log(carts);
+   const handleRemoveCart = (id) => {
+     const remainingCart = carts.filter((cart) => cart.recipe_id !== id);
+     setCarts(remainingCart);
+    // console.log(id);
+   };
+
+  // console.log(carts);
 
   return (
     <div className="container mx-auto p-7 lg:px-12 xl:px-16">
@@ -38,7 +44,7 @@ const App = () => {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
           <Recipes handleWantToCook={handleWantToCook} />
-          <Carts carts={carts} />
+          <Carts carts={carts} handleRemoveCart={handleRemoveCart} />
         </div>
       </section>
       <ToastContainer />
