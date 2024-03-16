@@ -41,14 +41,14 @@ const Carts = ({ carts, handleCurrentlyCooking, currentlycooking }) => {
                         <td>{recipe_name}</td>
                         <td>{preparing_time} minutes</td>
                         <td>{calories} calories</td>
-                        {/* <td> */}
-                          <td
+                        <td>
+                          <button
                             onClick={() => handleCurrentlyCooking(recipe)}
                             className="btn bg-[#0BE58A] hover:bg-[#03d47d] text-[#150B2B] font-medium rounded-full"
                           >
                             Preparing
-                          </td>
-                        {/* </td> */}
+                          </button>
+                        </td>
                       </tr>
                     );
                   })}
