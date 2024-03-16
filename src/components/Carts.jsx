@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
 const Carts = ({ carts, handleCurrentlyCooking, currentlycooking }) => {
   // console.log(carts);
@@ -19,7 +19,7 @@ const Carts = ({ carts, handleCurrentlyCooking, currentlycooking }) => {
             <div className="border-b-2 border-[#2828281A] "></div>
           </div>
 
-          <div className=" bg-slate-50">
+          <div className=" bg-slate-100">
             <div className="fira-sans  overflow-x-auto ">
               <table className="table">
                 <thead>
@@ -41,14 +41,14 @@ const Carts = ({ carts, handleCurrentlyCooking, currentlycooking }) => {
                         <td>{recipe_name}</td>
                         <td>{preparing_time} minutes</td>
                         <td>{calories} calories</td>
-                        <td>
-                          <button
+                        {/* <td> */}
+                          <td
                             onClick={() => handleCurrentlyCooking(recipe)}
                             className="btn bg-[#0BE58A] hover:bg-[#03d47d] text-[#150B2B] font-medium rounded-full"
                           >
                             Preparing
-                          </button>
-                        </td>
+                          </td>
+                        {/* </td> */}
                       </tr>
                     );
                   })}
@@ -71,7 +71,7 @@ const Carts = ({ carts, handleCurrentlyCooking, currentlycooking }) => {
             <div className="border-b-2 border-[#2828281A] "></div>
           </div>
 
-          <div className=" bg-slate-50">
+          <div className=" bg-slate-100">
             <div className="fira-sans  overflow-x-auto ">
               <table className="table">
                 <thead>
@@ -95,6 +95,24 @@ const Carts = ({ carts, handleCurrentlyCooking, currentlycooking }) => {
                       </tr>
                     );
                   })}
+                  <tr className="bg-white">
+                    <th></th>
+                    <td></td>
+                    <td>
+                      Total Time = {currentlycooking.reduce(
+                        (prev, curr) => prev + curr.preparing_time,
+                        0
+                      )}{" "}
+                      minutes
+                    </td>
+                    <td>
+                      Total Calories = {currentlycooking.reduce(
+                        (prev, curr) => prev + curr.calories,
+                        0
+                      )}{" "}
+                      calories
+                    </td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -111,4 +129,4 @@ Carts.propTypes = {
   handleCurrentlyCooking: PropTypes.func.isRequired,
 };
 
-export default Carts
+export default Carts;

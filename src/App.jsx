@@ -48,7 +48,7 @@ const App = () => {
             dietary need.
           </p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-2 xl:gap-6">
           <Recipes handleWantToCook={handleWantToCook} />
           <Carts
             carts={carts}
