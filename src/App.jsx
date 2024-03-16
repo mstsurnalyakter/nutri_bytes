@@ -1,9 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from './components/Header'
 import Recipes from './components/Recipes';
 import Carts from './components/Carts';
+  import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from 'react-toastify';
 
 const App = () => {
+
+  const [recipes,setRecipes] = useState([]);
+
+  const handleWantToCook = recipe =>{
+    const isExist = recipes.find(rp => rp.id === recipe.id);
+    if (isExist) {
+      toast.warn("Recipe already selected!");
+    }else{
+      setRecipes([...recipes, recipe]);
+      toast.success("Recipe Successfully Add");
+    }
+  }
+
   return (
     <div className="container mx-auto p-7 lg:px-12 xl:px-16">
       <Header />
@@ -20,10 +35,11 @@ const App = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
-          <Recipes />
+          <Recipes handleWantToCook={handleWantToCook} />
           <Carts />
         </div>
       </section>
+      <ToastContainer />
     </div>
   );
 }
