@@ -8,6 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 const App = () => {
 
   const [carts,setCarts] = useState([]);
+  const [currentlycooking,setCurrentlycooking] = useState([])
 
   const handleWantToCook = recipe =>{
       const isExist = carts.find((cart) => cart.recipe_id === recipe.recipe_id);
@@ -19,13 +20,18 @@ const App = () => {
       }
   }
 
-   const handleRemoveCart = (id) => {
-     const remainingCart = carts.filter((cart) => cart.recipe_id !== id);
-     setCarts(remainingCart);
-    // console.log(id);
-   };
+   const handleCurrentlyCooking = (recipe) => {
+     const remainingCart = carts.filter(
+       (cart) => cart.recipe_id !== recipe.recipe_id
+     );
 
-  // console.log(carts);
+       setCarts(remainingCart);
+
+     setCurrentlycooking([...currentlycooking, recipe]);
+
+     toast("Recipe moved to Currently Cooking");
+
+   };
 
   return (
     <div className="container mx-auto p-7 lg:px-12 xl:px-16">
@@ -44,7 +50,11 @@ const App = () => {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
           <Recipes handleWantToCook={handleWantToCook} />
-          <Carts carts={carts} handleRemoveCart={handleRemoveCart} />
+          <Carts
+            carts={carts}
+            handleCurrentlyCooking={handleCurrentlyCooking}
+            currentlycooking={currentlycooking}
+          />
         </div>
       </section>
       <ToastContainer />

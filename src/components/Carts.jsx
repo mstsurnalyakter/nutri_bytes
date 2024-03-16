@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Carts = ({ carts, handleRemoveCart }) => {
+const Carts = ({ carts, handleCurrentlyCooking, currentlycooking }) => {
   // console.log(carts);
   return (
     <div className="lg:col-span-2">
@@ -43,7 +43,7 @@ const Carts = ({ carts, handleRemoveCart }) => {
                         <td>{calories} calories</td>
                         <td>
                           <button
-                            onClick={() =>handleRemoveCart(recipe_id)}
+                            onClick={() => handleCurrentlyCooking(recipe)}
                             className="btn bg-[#0BE58A] hover:bg-[#03d47d] text-[#150B2B] font-medium rounded-full"
                           >
                             Preparing
@@ -58,14 +58,14 @@ const Carts = ({ carts, handleRemoveCart }) => {
           </div>
         </div>
         {/* ************* */}
-        {/* <div>
+        <div>
           <h2 className="text-[#282828] text-2xl font-semibold mb-4">
             Currently cooking:{" "}
-            {carts.length <= 9
-              ? carts.length === 0
+            {currentlycooking.length <= 9
+              ? currentlycooking.length === 0
                 ? "0"
-                : `0${carts.length}`
-              : carts.length}
+                : `0${currentlycooking.length}`
+              : currentlycooking.length}
           </h2>
           <div className="px-20 mb-8">
             <div className="border-b-2 border-[#2828281A] "></div>
@@ -80,11 +80,10 @@ const Carts = ({ carts, handleRemoveCart }) => {
                     <th>Name</th>
                     <th>Time</th>
                     <th>Calories</th>
-                    <th></th>
                   </tr>
                 </thead>
                 <tbody>
-                  {carts.map((recipe, index) => {
+                  {currentlycooking.map((recipe, index) => {
                     const { recipe_id, recipe_name, preparing_time, calories } =
                       recipe;
                     return (
@@ -93,11 +92,6 @@ const Carts = ({ carts, handleRemoveCart }) => {
                         <td>{recipe_name}</td>
                         <td>{preparing_time} minutes</td>
                         <td>{calories} calories</td>
-                        <td>
-                          <button className="btn bg-[#0BE58A] hover:bg-[#03d47d] text-[#150B2B] font-medium rounded-full">
-                            Preparing
-                          </button>
-                        </td>
                       </tr>
                     );
                   })}
@@ -105,7 +99,7 @@ const Carts = ({ carts, handleRemoveCart }) => {
               </table>
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );
@@ -113,7 +107,8 @@ const Carts = ({ carts, handleRemoveCart }) => {
 
 Carts.propTypes = {
   carts: PropTypes.array.isRequired,
-  handleRemoveCart: PropTypes.func.isRequired,
+  currentlycooking: PropTypes.array.isRequired,
+  handleCurrentlyCooking: PropTypes.func.isRequired,
 };
 
 export default Carts
