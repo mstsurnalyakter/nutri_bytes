@@ -29,7 +29,7 @@ const App = () => {
 
     setCurrentlycooking([...currentlycooking, recipe]);
 
-    toast("Recipe moved to Currently Cooking");
+    toast("Recipe moved to Currently Cooking Section");
   };
 
   return (
