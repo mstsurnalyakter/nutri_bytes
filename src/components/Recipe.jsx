@@ -1,5 +1,4 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 import { IoTimeOutline } from "react-icons/io5";
 import { AiOutlineFire } from "react-icons/ai";
 
@@ -12,7 +11,7 @@ const Recipe = ({ recipe, handleWantToCook }) => {
     calories,
     recipe_image,
   } = recipe;
-  // console.log(recipe);
+
   return (
     <div>
       <div className="card bg-base-100 shadow-xl  p-6 border-2 border-[#2828281A] ">
@@ -68,4 +67,4 @@ Recipe.propTypes = {
   handleWantToCook: PropTypes.func.isRequired,
 };
 
-export default Recipe
+export default Recipe;

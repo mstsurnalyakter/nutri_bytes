@@ -1,10 +1,8 @@
-import React from 'react'
-import banner from '../assets/banner.png'
+import banner from "../assets/banner.png";
 
 const Banner = () => {
   return (
     <>
-      {/* <!-- banner section --> */}
       <div
         className={`hero min-h-[600px] rounded-3xl w-full bg-center  bg-cover  object-cover`}
         style={{ backgroundImage: `url(${banner})` }}
@@ -32,6 +30,6 @@ const Banner = () => {
       </div>
     </>
   );
-}
+};
 
-export default Banner
+export default Banner;

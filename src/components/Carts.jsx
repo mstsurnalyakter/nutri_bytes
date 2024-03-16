@@ -1,8 +1,6 @@
-import React from "react";
 import PropTypes from "prop-types";
 
 const Carts = ({ carts, handleCurrentlyCooking, currentlycooking }) => {
-  // console.log(carts);
   return (
     <div className="lg:col-span-2">
       <div className="bg-base-100 shadow-xl text-center py-8 rounded-3xl border-2 border-[#2828281A] ">
@@ -57,7 +55,7 @@ const Carts = ({ carts, handleCurrentlyCooking, currentlycooking }) => {
             </div>
           </div>
         </div>
-        {/* ************* */}
+
         <div>
           <h2 className="text-[#282828] text-2xl font-semibold mb-4">
             Currently cooking:{" "}
@@ -99,14 +97,16 @@ const Carts = ({ carts, handleCurrentlyCooking, currentlycooking }) => {
                     <th></th>
                     <td></td>
                     <td>
-                      Total Time = {currentlycooking.reduce(
+                      Total Time ={" "}
+                      {currentlycooking.reduce(
                         (prev, curr) => prev + curr.preparing_time,
                         0
                       )}{" "}
                       minutes
                     </td>
                     <td>
-                      Total Calories = {currentlycooking.reduce(
+                      Total Calories ={" "}
+                      {currentlycooking.reduce(
                         (prev, curr) => prev + curr.calories,
                         0
                       )}{" "}

@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaFacebook, FaGithub, FaTwitter } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -50,6 +49,6 @@ const Footer = () => {
       </footer>
     </div>
   );
-}
+};
 
-export default Footer
+export default Footer;

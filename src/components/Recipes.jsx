@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import PropTypes from 'prop-types'
-import Recipe from './Recipe';
+import PropTypes from "prop-types";
+import Recipe from "./Recipe";
+import { useEffect, useState } from "react";
 
 const Recipes = ({ handleWantToCook }) => {
   const [recipes, setRecipes] = useState([]);
@@ -16,11 +16,8 @@ const Recipes = ({ handleWantToCook }) => {
     fetchRecipesData();
   }, []);
 
-  // console.log(recipes);
-
   return (
     <div className="lg:col-span-3">
-      {/* <h2>Recipes</h2> */}
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-2 xl:gap-6">
         {recipes.map((recipe) => (
           <Recipe
@@ -35,7 +32,7 @@ const Recipes = ({ handleWantToCook }) => {
 };
 
 Recipes.propTypes = {
-  handleWantToCook:PropTypes.func.isRequired
+  handleWantToCook: PropTypes.func.isRequired,
 };
 
-export default Recipes
+export default Recipes;

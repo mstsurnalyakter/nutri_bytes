@@ -1,38 +1,36 @@
-import React, { useState } from 'react'
-import Header from './components/Header'
-import Recipes from './components/Recipes';
-import Carts from './components/Carts';
+import Header from "./components/Header";
+import Recipes from "./components/Recipes";
+import Carts from "./components/Carts";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Footer from './components/Footer';
+import Footer from "./components/Footer";
+import { useState } from "react";
 
 const App = () => {
+  const [carts, setCarts] = useState([]);
+  const [currentlycooking, setCurrentlycooking] = useState([]);
 
-  const [carts,setCarts] = useState([]);
-  const [currentlycooking,setCurrentlycooking] = useState([])
+  const handleWantToCook = (recipe) => {
+    const isExist = carts.find((cart) => cart.recipe_id === recipe.recipe_id);
+    if (isExist) {
+      toast.warn("Recipe already selected!");
+    } else {
+      setCarts([...carts, recipe]);
+      toast.success("Recipe Successfully Add");
+    }
+  };
 
-  const handleWantToCook = recipe =>{
-      const isExist = carts.find((cart) => cart.recipe_id === recipe.recipe_id);
-      if (isExist) {
-        toast.warn("Recipe already selected!");
-      } else {
-        setCarts([...carts, recipe]);
-        toast.success("Recipe Successfully Add");
-      }
-  }
+  const handleCurrentlyCooking = (recipe) => {
+    const remainingCart = carts.filter(
+      (cart) => cart.recipe_id !== recipe.recipe_id
+    );
 
-   const handleCurrentlyCooking = (recipe) => {
-     const remainingCart = carts.filter(
-       (cart) => cart.recipe_id !== recipe.recipe_id
-     );
+    setCarts(remainingCart);
 
-       setCarts(remainingCart);
+    setCurrentlycooking([...currentlycooking, recipe]);
 
-     setCurrentlycooking([...currentlycooking, recipe]);
-
-     toast("Recipe moved to Currently Cooking");
-
-   };
+    toast("Recipe moved to Currently Cooking");
+  };
 
   return (
     <div>
@@ -66,6 +64,6 @@ const App = () => {
       <ToastContainer />
     </div>
   );
-}
+};
 
-export default App
+export default App;
