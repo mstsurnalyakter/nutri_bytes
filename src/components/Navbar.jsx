@@ -60,7 +60,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end space-x-3">
-          <label className="input input-bordered rounded-full flex items-center gap-2 bg-[#150B2B0D]">
+          <label className="input input-bordered rounded-full hidden sm:flex items-center gap-2 bg-[#150B2B0D]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
